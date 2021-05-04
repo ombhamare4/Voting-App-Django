@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>login</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Handlee&display', cursive;
+    }
+
+    a {
+      color: aliceblue;
+      text-decoration: none;
+    }
+
+    .login {
+      border-top: 20px solid rgba(246, 36, 89, 1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .login>.container {
+      width: 550px;
+      padding: 60px 0;
+    }
+
+    .login>.container>p {
+      margin-top: 36px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .login>.container>p>a {
+      display: inline-block;
+      margin-left: 20px;
+      color: rgba(246, 36, 89, 1);
+    }
+
+    .login>.container>p>a:hover {
+      color: rgba(246, 36, 89, 1);
+    }
+
+    .login>.container form {
+      padding-top: 40px;
+    }
+
+    .login .panel {
+      padding: 60px 80px 40px;
+      background-color: #F6FAFF;
+    }
+
+    .login h1 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 50px;
+    }
+
+
+    .login h2 {
+      text-align: center;
+      font-size: 44px;
+    }
+
+    .login input {
+      padding: 10px 20px;
+    }
+
+    .login p {
+      font-size: 20px;
+    }
+
+    .login a {
+      color: black;
+    }
+
+    .login input[name="username"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+    }
+
+    .login input[name="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-bottom: 30px;
+    }
+
+    .login input[type="submit"] {
+      margin-top: 50px;
+      width: 90%;
+      padding: 20px;
+      font-size: 20px;
+      border-radius: 50px;
+      background-color: rgba(246, 36, 89, 1);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login">
+    <div class="container">
+      <div class="panel">
+        <h2>Log in</h2>
+        <form action="/login" method="post">
+          <p>Username</p>
+          <input type="text" name="username" placeholder="Enter Your Username">
+          <p>Password</p>
+          <input type="password" name="password" placeholder="Enter Your Password">
+          <input type="submit" value="Log in">
+          <p><a href="signup.html">Don't Have Account ?</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

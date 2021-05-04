@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Top</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+            body{
+                margin: 0;
+                font-family: 'Handlee&display', cursive;
+            }
+            a{
+                color: aliceblue;
+                text-decoration: none; 
+            }
+            /* Top.html */
+            header{
+                height: 80px;
+                width: 100%;
+                background-color: rgba(246, 36, 89, 1);
+                position: fixed;
+                top:0;
+                z-index: 10;
+            }
+            .container{
+                width:100%;
+                padding-left:15px;
+                padding-right:15px;
+                margin-left:auto;
+                margin-right:auto;
+                display: flex;
+            }
+
+            .logo{
+                margin-left: 20px;
+            }
+            .guest{
+                font-size: 25px;
+                
+                margin:5px 30px;
+            }
+            .container ul{
+                margin-left: 1100px;
+                display: flex;
+                list-style: none;
+            }
+            .container li{
+                font-size: 22px;
+                margin-top: 10px;;
+                margin-left: 30px;
+            }
+
+            .top-wrapper{
+                padding-top:100px;
+                padding-bottom:100px;
+                height: 800px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto;
+            
+            }
+
+            .top-detail {
+                margin-left: 50px;
+                width: 36%;
+                min-width: 320px;
+                margin-top: 10px;
+            }
+            
+            .top-detail .subtitle {
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 2px;
+            }
+            
+            .top-detail .title {
+                font-size: 74px;
+                line-height: 66px;
+                letter-spacing: 2px;
+                margin-bottom: 44px;
+            }
+            
+            .top-detail .description {
+                font-size: 20px;
+                line-height: 28px;
+                letter-spacing: 0.5px;
+                margin-bottom: 40px;
+            }
+            .top-detail .index-button {
+                padding: 20px;
+                width: 184px;
+                height: 148px;
+                text-align: center;
+                line-height: 45px;
+                font-size: 25px;
+                color:  white;
+                background-color: rgba(246, 36, 89, 0.7);
+                border: 2px solid white;
+                border-radius: 2px;
+            }
+            
+            .top-detail .index-button:hover {
+                color: white;
+                background-color:  rgba(246, 36, 89, 1);
+            }
+            
+            .index-button {
+                cursor: pointer;
+            }
+            .top-image {
+                width: 64%;
+                text-align: center;
+                overflow: hidden;
+            }
+            
+            .top-image img {
+                width: 88%;
+            }
+
+            .botom-wrapper{
+                padding-bottom: 200px;
+                background-color: rgba(246, 36, 89, 1);
+                color: aliceblue;
+            }
+            .botom-wrapper h1{
+                width: 100%;
+                margin:30px;
+                font-size: 40px;
+            }
+            .botom-wrapper p{
+                padding: 20px;
+                font-size: 20px;;
+                margin:30px 30px;
+            }
+
+            .botom-wrapper ul{
+                margin-right: 100px;;
+            }
+
+            .botom-wrapper li{
+                text-align:center;
+            }
+            .botom-wrapper a:hover{
+                text-align:center;
+                color: rgba(137, 196, 244, 1);
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <h1>Your Vote</h1>
+                </div>
+                <div class="guest">
+                    <p>Welcome,Guest</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="login.html">login</a></li>
+                        <li><a href="signup.html">SignUp</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div class="top-wrapper">
+            
+            <div class="top-detail">
+                <h2 class="subtitle">Code Knights Present</h2>
+                <h1 class="title">Voting App</h1>
+                <p class="description">
+                  The Ballot is stronger than Bullet
+                  <br>
+                  -Abraham Lincoln
+                </p>
+                <a class="index-button" href="#">Check out Polls</a>
+              </div>
+              <div class="top-image">
+                <!-- Load the image file here -->
+                {% load static %}
+                {% comment %} <img src="/img/elections_02.png"> {% endcomment %}
+                <img src="{% static 'elections_02.png' %}">
+                
+              </div>
+        </div>
+        <div class="botom-wrapper" id="about">
+            <div class="container">
+                <div class="bottom-logo">
+                    <h1>Code Knights</h1>
+                    <p>This project build with HTML,CSS,Django</p>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/om-bhamare-3912b21b8/">Om Bhamare</a></li>
+                        <li><a href="https://www.linkedin.com/in/om-bhamare-3912b21b8/">Aman Lohani</a></li>
+                        <li><a href="https://www.linkedin.com/in/om-bhamare-3912b21b8/">Kushal Choudhary</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
