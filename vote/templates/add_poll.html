@@ -140,10 +140,11 @@
         </div>
     </div>
     <div class="poll-add">
-        <form>
+    
+        <form action="/accounts/add_poll" method="POST">
+            {% csrf_token %}
             <label>Enter Voting Quetion</label>
-            <input type="text" id="pollQ" name="pollQuetion">
-
+            <input type="text" id="pollQ" name="pollquetion">
             <label>Option1</label>
             <input type="text" id="op1" name="option1">
             <label>Option2</label>

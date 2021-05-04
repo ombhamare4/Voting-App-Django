@@ -103,8 +103,12 @@
     </div>
     <div class="poll-list">
         <ul>
-            <l1><a href="#">List will display</a></l1>
+        {% for quetionList in list_quetion %}
+            <l1><a href="#">
+                {{ quetionList.pollquetion }}</a></l1>
+        {% endfor %}
         </ul>
+
     </div>
 </body>
 </html>
