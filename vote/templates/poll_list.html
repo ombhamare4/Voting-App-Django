@@ -1,114 +1,163 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Top</title>
     <style>
-         @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
-        body{
+        @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+        body {
             margin: 0;
             font-family: 'Handlee&display', cursive;
+            width: 100%;
         }
-        a{
+
+        a {
             color: aliceblue;
-            text-decoration: none; 
+            text-decoration: none;
         }
-        header{
-                height: 80px;
-                width: 100%;
-                background-color: rgba(246, 36, 89, 1);
-                position: fixed;
-                top:0;
-                z-index: 10;
-            }
-            .container{
-                width:100%;
-                padding-left:15px;
-                padding-right:15px;
-                margin-left:auto;
-                margin-right:auto;
-                display: flex;
-            }
 
-            .logo{
-                margin-left: 20px;
-            }
-            .guest{
-                font-size: 25px;
-                
-                margin:5px 30px;
-            }
-            .container ul{
-                margin-left: 1100px;
-                display: flex;
-                list-style: none;
-            }
-            .container li{
-                font-size: 22px;
-                margin-top: 10px;;
-                margin-left: 30px;
-            }
-            .top-wrapper{
-                padding-top:100px;
-                padding-bottom:100px;
-                height: 50px;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                margin-left: 600px;
-            
-            }
+        header {
+            height: 80px;
+            width: 100%;
+            background-color: rgba(246, 36, 89, 1);
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
 
-            .top-detail {
-                margin-left: 50px;
-                width: 36%;
-                min-width: 320px;
-                margin-top: 10px;
-            }
-            .top-detail a{
-                float: right;
-                color:black;
-            }
-            
-            .poll-list a{
-                margin-left: 600px;
-                font-size: 22px;
-                color: black;
-                display: flex;
-                margin-top: 10px;
-            }
+        .container {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+        }
+
+        .logo {
+            margin-left: 20px;
+        }
+
+        .list {
+            margin-left: 200px;
+        }
+
+        .container ul {
+            margin-left: 1100px;
+            display: flex;
+            list-style: none;
+        }
+
+        .container li {
+            font-size: 22px;
+            margin-top: 10px;
+            ;
+            margin-left: 30px;
+        }
+
+        .top-wrapper {
+            padding-top: 100px;
+            /* padding-bottom:100px; */
+            margin-bottom: 90px;
+            height: 50px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            margin-left: 600px;
+
+        }
+
+        .top-detail {
+            margin-left: 50px;
+            width: 36%;
+            min-width: 320px;
+            margin-top: 10px;
+        }
+
+        .top-detail a {
+            float: right;
+            color: black;
+        }
+
+        .top-detail .index-button {
+            /* padding: 20px; */
+             width: 184px;
+            /* height: 148px; */
+            margin-right: 40px;
+            text-align: center;
+            line-height: 45px;
+            font-size: 25px;
+            color: white;
+            background-color: rgba(246, 36, 89, 1);
+            border: 2px solid white;
+            border-radius: 40px;
+        }
+
+        .top-detail .index-button:hover {
+            color: white;
+            background-color: rgba(246, 36, 89, 0.7);
+        }
+
+        .index-button {
+            cursor: pointer;
+        }
+
+        .poll-list a {
+            /* margin-left: 200px; */
+            font-size: 22px;
+            color: black;
+            /* display: flex; */
+            padding-top: 10px;
+            margin-top: 20px;
+            margin-right: 20px;
+        }
+
+        .poll-list {
+
+            margin-left: 500px;
+            margin-right: 600px;
+            background-color: rgb(228, 78, 115);
+            margin-top: 10px;
+            display: flex;
+        }
     </style>
 </head>
+
 <body>
+
     <header>
         <div class="container">
             <div class="logo">
-                <h1><a href="top.html">Your Vote</a></h1>
-            </div>
-            <div class="guest">
-                <p>Welcome,Guest</p>
+                <h1><a href="{% url 'top' %}">Your Vote</a></h1>
             </div>
             <div class="list">
                 <ul>
-                    <li><a href="top.html">Log Out</a></li>
+                    <li><a href="{% url 'top' %}">Back</a></li>
                 </ul>
             </div>
         </div>
     </header>
     <div class="top-wrapper">
         <div class="top-detail">
-            <h1 class="title">Available Poll List</h1>
-            <a class="index-button" href="#">Add</a>
-          </div>
+            <h1 class="title">Available Polls</h1>
+            <a class="index-button" href="{% url 'add_poll' %}">Add</a>
+        </div>
     </div>
     <div class="poll-list">
         <ul>
-        {% for quetionList in list_quetion %}
-            <l1><a href="#">
-                {{ quetionList.pollquetion }}</a></l1>
-        {% endfor %}
+            {% for quetionList in list_quetion %}
+            <li>
+                <h2>{{ quetionList.pollquetion }}</h2>
+                <a href="{% url 'vote_poll' quetionList.id %}">Vote</a>
+                <a href="{% url 'result_poll' quetionList.id %}">Result</a>
+                <hr />
+            </li>
+            {% endfor %}
         </ul>
 
     </div>
 </body>
+
 </html>

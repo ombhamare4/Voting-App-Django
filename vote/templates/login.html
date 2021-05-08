@@ -104,6 +104,7 @@
     }
 
     .login input[type="submit"] {
+      color: white;
       margin-top: 50px;
       width: 90%;
       padding: 20px;
@@ -125,7 +126,8 @@
           <p>Password</p>
           <input type="password" name="password" placeholder="Enter Your Password">
           <input type="submit" value="Log in">
-          <p><a href="signup.html">Don't Have Account ?</a></p>
+          <p><a href="{% url 'signup'%}">Don't Have Account ?</a></p>
+          <p><a href="{%url 'top'%}">Back to Home</a></p>
         </form>
       </div>
     </div>

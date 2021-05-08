@@ -118,6 +118,7 @@
     .sign input[type="submit"] {
       margin-top: 50px;
       margin-bottom: 20px;
+      color: white;
       width: 90%;
       padding: 20px;
       font-size: 20px;
@@ -141,7 +142,8 @@
           <p>Password</p>
           <input type="password" name="password" placeholder="Create Password">
           <input type="submit" value="Sign up">
-          <a href="login.html">Already Have Account?</a>
+          <a href="{%url 'login'%}">Already Have Account?</a>
+          <p><a href="{%url 'top'%}">Back to Home</a></p>
         </form>
       </div>
     </div>
