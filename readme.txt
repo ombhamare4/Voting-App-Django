@@ -32,7 +32,7 @@ step 6:
         save in repositery
     
 
-step 7:
+step 7::
    Now here om enter too much 
    data so how aman will see this all?
 
