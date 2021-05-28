@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <title>Top</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="responsive.css" >
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
@@ -35,29 +37,29 @@
             padding-right: 15px;
             margin-left: auto;
             margin-right: auto;
-            display: flex;
+            /* display: flex; */
         }
 
         .logo {
             margin-left: 20px;
+            float: left;
         }
 
-        .guest {
-            font-size: 25px;
-
-            margin: 5px 30px;
-        }
 
         .container ul {
-            margin-left: 1100px;
+            /* margin-left: 1100px; */
             display: flex;
             list-style: none;
+            
         }
 
+        .container > .list{
+            float: right;
+        }
         .container li {
             font-size: 22px;
             margin-top: 10px;
-            ;
+            
             margin-left: 30px;
         }
 
@@ -173,9 +175,6 @@
         <div class="container">
             <div class="logo">
                 <h1>Your Vote</h1>
-            </div>
-            <div class="guest">
-                <p>Welcome</p>
             </div>
             <div class="list">
                 <ul>
