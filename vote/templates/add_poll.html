@@ -116,7 +116,7 @@
 </head>
 
 <body>
-{% load widget_tweaks %}
+
     <header>
         <div class="container">
             <div class="logo">
@@ -141,13 +141,13 @@
             <input type="text" id="pollQ" name="pollquetion">
             <label>Option1</label>
             <input type="text" id="op1" name="option1">
-            {% render_field form.option_one%}
+            
             <label>Option2</label>
             <input type="text" id="op2" name="option2">
-            {% render_field form.option_two%}
+            
             <label>Option3</label>
             <input type="text" id="op3" name="option3">
-            {% render_field form.option_three%}
+            
             <input type="submit" value="Add Poll">
         </form>
     </div>
