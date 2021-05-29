@@ -44,8 +44,6 @@ def vote_poll(request,poll_id):
     quetion_list=pollQuetions.objects.get(pk=poll_id)
     
     if request.method == 'POST':
-        # selected_option=
-        # print(request.POST['poll'])
         selected_option = request.POST['poll']
         if selected_option == 'option1':
             quetion_list.option1_count += 1
